@@ -147,13 +147,14 @@ if __name__ == '__main__':
         print("-------------------------------------------------------------------")
         # Takes the input from CLI
         command = input("Enter The Command ")
-        command = command.lower().strip()
+        command = command.strip()
         # Splits the input command to a list called command_list
         command_list = ' '.join(command.split(' ')).split()
         # A dictionary that store the command and the number of words expected in the command
         method_arguments_limit = {'add': 3, 'remove': 3, 'removeall': 2, 'members': 2,
                                   'keyexists': 2, 'memberexists': 3, 'keys': 1,
                                   'clear': 1, 'allmembers': 1, 'items': 1, 'quit': 1}
+        command_list[0] = command_list[0].lower()
         try:
             if command_list[0] == 'quit':
                 print("Thank you Have a nice day! ")

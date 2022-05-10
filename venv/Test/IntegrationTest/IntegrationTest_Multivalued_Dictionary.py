@@ -18,7 +18,7 @@ class IntegrationTestMultivaluedDictionary(unittest.TestCase):
         self.clearCapturedOutput()
         return value
 
-    def test_Keys(self):
+    def test_KEYS(self):
         dictionary = MultiValuedDictionary()
 
         command = 'ADD foo bar'.split()
@@ -32,7 +32,7 @@ class IntegrationTestMultivaluedDictionary(unittest.TestCase):
         dictionary.keys()
         self.assertEqual(self.getCapturedOutputValue(), 'foo\nbaz\n')
 
-    def test_Members(self):
+    def test_MEMBERS(self):
         dictionary = MultiValuedDictionary()
 
         command = 'ADD foo bar'.split()
@@ -47,7 +47,7 @@ class IntegrationTestMultivaluedDictionary(unittest.TestCase):
         dictionary.members(command)
         self.assertEqual(self.getCapturedOutputValue(), "Error, key doesn't exits\n")
 
-    def test_Add(self):
+    def test_ADD(self):
         dictionary = MultiValuedDictionary()
 
         command = 'ADD foo bar'.split()
@@ -62,7 +62,7 @@ class IntegrationTestMultivaluedDictionary(unittest.TestCase):
         dictionary.add(command)
         self.assertEqual(self.getCapturedOutputValue(), 'Error, Member already exists for the key\n')
 
-    def test_Remove(self):
+    def test_REMOVE(self):
         dictionary = MultiValuedDictionary()
 
         command = 'ADD foo bar'.split()
@@ -95,7 +95,7 @@ class IntegrationTestMultivaluedDictionary(unittest.TestCase):
         dictionary.remove(command)
         self.assertEqual(self.getCapturedOutputValue(), 'ERROR, key does not exist\n')
 
-    def test_Removeall(self):
+    def test_REMOVEALL(self):
         dictionary = MultiValuedDictionary()
 
         command = 'ADD foo bar'.split()
@@ -120,7 +120,7 @@ class IntegrationTestMultivaluedDictionary(unittest.TestCase):
         dictionary.removeall(command)
         self.assertEqual(self.getCapturedOutputValue(), 'ERROR, key does not exist\n')
 
-    def test_Clear(self):
+    def test_CLEAR(self):
         dictionary = MultiValuedDictionary()
 
         command = 'ADD foo bar'.split()
@@ -174,7 +174,7 @@ class IntegrationTestMultivaluedDictionary(unittest.TestCase):
         dictionary.memberexists(command)
         self.assertEqual(self.getCapturedOutputValue(), 'False\n')
 
-    def test_allMembers(self):
+    def test_ALLMEMBERS(self):
         dictionary = MultiValuedDictionary()
 
         command = 'ADD foo bar'.split()
@@ -184,7 +184,7 @@ class IntegrationTestMultivaluedDictionary(unittest.TestCase):
         dictionary.allmembers()
         self.assertEqual(self.getCapturedOutputValue(), 'bar\n')
 
-    def test_items(self):
+    def test_ITEMS(self):
         dictionary = MultiValuedDictionary()
 
         dictionary.items()
