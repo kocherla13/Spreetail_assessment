@@ -1,9 +1,9 @@
-from app.Multivalued_Dictionary import MultiValuedDictionary
 import io, sys
 import unittest.mock
 import sys
 import os
 sys.path.append(os.path.dirname(os.path.abspath('..')))
+from app.Multivalued_Dictionary import MultiValuedDictionary
 
 
 class IntegrationTestMultivaluedDictionary(unittest.TestCase):

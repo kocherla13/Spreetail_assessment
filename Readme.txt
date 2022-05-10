@@ -16,8 +16,8 @@ typing cmd in the search bar and run the files:
       python3 IntegrationTest_Multivalued_Dictionary.py
 
       To Run individual Test case :
-         python3 IntegrationTest_Multivalued_Dictionary.py IntegrationTestMultivaluedDictionary.'Testcase name'
-         python3 UnitTest_Multivalued_Dictionary.py UnitTest_Multivalued_Dictionary.'Testcase name'
+         python3 IntegrationTest_Multivalued_Dictionary.py IntegrationTestMultivaluedDictionary.'TestcaseName'
+         python3 UnitTest_Multivalued_Dictionary.py UnitTest_Multivalued_Dictionary.'TestcaseName'
 
 
 
