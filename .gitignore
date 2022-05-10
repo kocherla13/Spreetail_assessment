@@ -1,0 +1,6 @@
+# created by virtualenv automatically
+.idea
+venv/lib
+venv/Scripts
+venv/app/__pycache__/Multivalued_Dictionary.cpython-37.pyc
+venv/pyvenv.cfg
