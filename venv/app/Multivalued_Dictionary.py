@@ -147,6 +147,7 @@ if __name__ == '__main__':
         print("-------------------------------------------------------------------")
         # Takes the input from CLI
         command = input("Enter The Command ")
+
         command = command.strip()
         # Splits the input command to a list called command_list
         command_list = ' '.join(command.split(' ')).split()
@@ -154,22 +155,24 @@ if __name__ == '__main__':
         method_arguments_limit = {'add': 3, 'remove': 3, 'removeall': 2, 'members': 2,
                                   'keyexists': 2, 'memberexists': 3, 'keys': 1,
                                   'clear': 1, 'allmembers': 1, 'items': 1, 'quit': 1}
-        command_list[0] = command_list[0].lower()
+
         try:
-            if command_list[0] == 'quit':
-                print("Thank you Have a nice day! ")
-                break
-            # check if command_list[0] string has any function with its name and check the arguments count
-            if command_list[0] in dir(MultiValuedDictionary) and \
-                    len(command_list) == method_arguments_limit[command_list[0]]:
-                # Calling a Method dynamically using the command_list[0] string
-                if method_arguments_limit[command_list[0]] == 1:
-                    getattr(multivalued_dictionary, command_list[0])()
+            if command:
+                command_list[0] = command_list[0].lower()
+                if command_list[0] == 'quit':
+                    print("Thank you Have a nice day! ")
+                    break
+                # check if command_list[0] string has any function with its name and check the arguments count
+                if command_list[0] in dir(MultiValuedDictionary) and \
+                        len(command_list) == method_arguments_limit[command_list[0]]:
+                    # Calling a Method dynamically using the command_list[0] string
+                    if method_arguments_limit[command_list[0]] == 1:
+                        getattr(multivalued_dictionary, command_list[0])()
+                    else:
+                        getattr(multivalued_dictionary, command_list[0])(command_list)
                 else:
-                    getattr(multivalued_dictionary, command_list[0])(command_list)
-            else:
-                print("Invalid command Please check the Parameters")
-                multivalued_dictionary.print_spec()
+                    print("Invalid command Please check the Parameters")
+                    multivalued_dictionary.print_spec()
 
         except Exception as e:
             print('exception occurred : ' + str(e))
