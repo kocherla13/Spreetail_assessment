@@ -1,5 +1,5 @@
 required: Python 3.0 and above installed
-IDE: Pycharm (preferred) or any IDE
+IDE:  Pycharm (preferred) or any IDE
 
 To run the application in CLI
 
