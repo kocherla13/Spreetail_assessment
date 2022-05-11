@@ -147,10 +147,8 @@ if __name__ == '__main__':
         print("-------------------------------------------------------------------")
         # Takes the input from CLI
         command = input("Enter The Command ")
-
-        command = command.strip()
         # Splits the input command to a list called command_list
-        command_list = ' '.join(command.split(' ')).split()
+        command_list = command.strip().split()
         # A dictionary that store the command and the number of words expected in the command
         method_arguments_limit = {'add': 3, 'remove': 3, 'removeall': 2, 'members': 2,
                                   'keyexists': 2, 'memberexists': 3, 'keys': 1,
@@ -163,7 +161,7 @@ if __name__ == '__main__':
                     print("Thank you Have a nice day! ")
                     break
                 # check if command_list[0] string has any function with its name and check the arguments count
-                if command_list[0] in dir(MultiValuedDictionary) and \
+                if command_list[0] in dir(multivalued_dictionary) and \
                         len(command_list) == method_arguments_limit[command_list[0]]:
                     # Calling a Method dynamically using the command_list[0] string
                     if method_arguments_limit[command_list[0]] == 1:
